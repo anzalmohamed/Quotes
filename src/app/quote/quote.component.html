@@ -1,8 +1,13 @@
 <div class="container-fluid">
-    <h1>My Quotes</h1>
+    <h1 class="h1 text-center">My Quotes</h1>
     <hr>
     <div class="row">
         <div class="col-md-6">
+            <app-quotes-form  (addQuote)="addNewQuote($event)"></app-quotes-form>
+         
+         </div>
+        <div class="col-md-6">
+            <p>The written quote is displayed here. Click <strong>Quote details</strong> to checkout the quote details,see the sample quote below </p>
             <ul>
                 <li *ngFor='let quote of quotes; let i = index'>
                     {{quote.name}} 
@@ -13,9 +18,6 @@
             <!--<input type="checkbox" ng-checked="all">Volvo<br>
     <input type="checkbox" ng-checked="all">Ford<br>-->
         </div>
-        <div class="col-md-6">
-           <app-quotes-form  (addQuote)="addNewQuote($event)"></app-quotes-form>
-        
-        </div>
+   
     </div>
 </div>
