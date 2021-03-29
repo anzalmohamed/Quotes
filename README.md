@@ -10,7 +10,7 @@ cuurent the only version available is one
 The app 'Quotes' lets its user create a quote and preview its details
 
 ## Screenshot
-<img src="" width="900px" height="440px">
+<img src="/home/anzal/Desktop/Angular-IP1/Quotes/image/screenshot.png" width="900px" height="440px">
 
 ## Live Page 
 https://mystifying-bhabha-d3a04b.netlify.app/
