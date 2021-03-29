@@ -2,36 +2,47 @@
     <h2 class="text-center">Create a Quote</h2>
     <hr>
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-2">
+        </div>
 
-    <form >
-        <div class="form-group">
-  
-            <label for="quoteName">Quote</label>
-            <textarea class="form-control" id="quoteName" rows="4"  name="name"required></textarea>   
-        </div>
-        
-        <div class="form-group">
-  
+        <div class="col-md-8">
+
+            <form (ngSubmit)='submitQuotes()' #quotesForm='ngForm'class="form text-center">
+                <div class="form-group">
+
+                    <label for="quoteName">Quote</label>
+                    <textarea class="form-control" id="quoteName" rows="4" name="name" [(ngModel)]="newQuote.quoteName" required></textarea>
+                </div>
+
+                <div class="form-group">
+
+
+                    <label for="author">Author</label>
+                    <input type="text" required class="form-control" [(ngModel)]="newQuote.author" id="author">
+
+                </div>
+                <div class="form-group">
+                    <label for="submitter">Submitter</label>
+                    <input type='text' class="form-control" id="submitter" [(ngModel)]="newQuote.submitter" required>
+
+                </div>
+                <div class="form-group">
+
+                    <label for="complete">Created on</label>
+                    <input type='date' id="complete" required>
           
-            <label for="author">Author</label>
-            <input type="text" required class="form-control" id="author">
-  
+                </div>
+                <button type="submit" class="btn btn-success">create quote</button>
+            </form>
         </div>
-        <div class="form-group">
-            <label for="submitter">Submitter</label>
-            <input type='text' class="form-control" id="submitter" required>
-  
+        <div class="col-md-2">
         </div>
-        <button type="submit" class="btn btn-success">create quote</button>
-    </form>
-        </div>
-        <div class="col-md-6">
-           <!-- <h3>summary</h3>
+         <h3>summary</h3>
             <ul>
                 <li>{{newQuote.quoteName}}</li>
-               
-            </ul>-->
-        </div>
+               <li>{{newQuote.author}}</li>
+               <li>{{newQuote.submitter}}</li>
+            </ul>
+
     </div>
-  </div>
+</div>

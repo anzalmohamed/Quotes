@@ -12,9 +12,15 @@ import { Quotes } from '../quotes';
 
 export class QuotesFormComponent implements OnInit {
   [x: string]: any;
- 
+newQuote=new Quotes(0, '','','', new Date())
       constructor() { }
-      
+      @Output() addQuotes = new EventEmitter<Quotes>();
+      submitQuotes(){
+        this.addQuotes.emit(this.newQuote);
+          }
+
+  //newQuotes=new Quote('','','','','')   
+  
   ngOnInit(): void {
   }
 
