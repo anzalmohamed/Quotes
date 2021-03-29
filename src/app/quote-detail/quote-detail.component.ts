@@ -10,10 +10,10 @@ import { Quote } from '../quote';
 export class QuoteDetailComponent implements OnInit {
   @Input() quote: Quote;
   upvote(){
-    this.quote.upvotes
+    this.quote.upvotes+=1
   }
   downvote(){
-    this.quote.downvotes
+    this.quote.downvotes++
   }
   @Output() isComplete = new EventEmitter<boolean>();
   quoteDelete(complete:boolean){

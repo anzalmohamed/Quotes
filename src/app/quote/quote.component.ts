@@ -28,6 +28,20 @@ export class QuoteComponent implements OnInit {
       }
     }
   }
+  highestVoteCount: number
+  lowestVoteCount: number
+  voteCount: number
+  
+  highestUpVotebtn() {
+    this.highestVoteCount= 0
+    this.lowestVoteCount = 0
+
+  for (this.voteCount = 0; this.voteCount < this.quotes.length; this.voteCount++) {
+    this. lowestVoteCount = this.quotes[this.voteCount].upvotes;
+    if (this. lowestVoteCount > this.highestVoteCount) { this.highestVoteCount = this. lowestVoteCount }
+  }
+  return this.highestVoteCount
+}
   constructor() { }
 
   ngOnInit(): void {

@@ -8,14 +8,22 @@
          </div>
         <div class="col-md-6">
             <p>The written quote is displayed here. Click <strong>Quote details</strong> to checkout the quote details,see the sample quote below </p>
-            <ul>
-                <li *ngFor='let quote of quotes; let i = index'>
-                    {{quote.name}} 
+            
+            <div *ngFor='let quote of quotes; let i = index'>
+
+                    <blockquote class="blockquote mb-0">
+                        <p appVoteCount *ngIf="highestUpVotebtn()===quote.upvotes && quote.upvotes>0">
+                          {{quote.name}} <br>
+                        </p>
+                        <p *ngIf="highestUpVotebtn()!==quote.upvotes || quote.upvotes===0">" {{quote.name}} "
+                        </p>
+
+                
                     <button (click)='toggleDetails(i)' class="btn btn-primary">Quote Details</button>
                     <app-quote-detail  *ngIf='quote.showAuthor' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
-                </li>
-            </ul>
         
+                    </blockquote>
+            </div>
         </div>
    
     </div>
