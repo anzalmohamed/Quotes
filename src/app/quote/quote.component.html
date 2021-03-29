@@ -1,13 +1,20 @@
-<div>
+<div class="container-fluid">
     <h1>My Quotes</h1>
-    <ul>
-        <li *ngFor='let quote of quotes; let i = index'>
-            {{quote.name}}
-            <button (click)='toggleDetails(i)'>Toggle Details</button>
-            <app-quote-detail *ngIf='quote.showAuthor' [quote]='quote'></app-quote-detail>
-        </li>
-    </ul>
-    <!--<input type="checkbox" ng-checked="all">Volvo<br>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            <ul>
+                <li *ngFor='let quote of quotes; let i = index'>
+                    {{quote.name}} created on {{quote.completeDate|date}}
+                    <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
+                    <app-quote-detail *ngIf='quote.showAuthor' [quote]='quote'></app-quote-detail>
+                </li>
+            </ul>
+            <!--<input type="checkbox" ng-checked="all">Volvo<br>
     <input type="checkbox" ng-checked="all">Ford<br>-->
+        </div>
+        <div class="col-md-6">
+           <!--<app-quotes-form  (addQuote)="addNewQuote($event)"></app-quotes-form>--> 
+        </div>
+    </div>
 </div>
-
