@@ -13,7 +13,7 @@ The app 'Quotes' lets its user create a quote and preview its details
  <img src="/image/screenshot.png" width="900px" height="440px">
 
 ## Live Page 
-https://mystifying-bhabha-d3a04b.netlify.app/
+https://amazing-almeida-af5e7a.netlify.app/
 
 
 ## Installation / Setup instruction
