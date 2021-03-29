@@ -3,5 +3,10 @@
 
 <p class="detail mb-0">This quote was created on {{quote.completeDate|date}}</p>
 <p>Time passed since quote was created: {{quote.completeDate|dateCount}}</p>
-<button (click) = 'quoteDelete(true)' class="btn btn-primary">Delete Quote</button>
+
+<button type="button" class="btn btn-outline-success">Upvote</button>
+<button type="button" class="btn btn-outline-danger ml-5">Downvote</button>
+<br>
+
+<button (click) = 'quoteDelete(true)' class="btn btn-primary mt-3">Delete Quote</button>
 
