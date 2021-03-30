@@ -1,21 +1,23 @@
 <div class="container-fluid">
-    <h1 class="h1 text-center"><strong> My Quotes</strong></h1>
-    <h5 class="h5 text-center"><strong><em>create your own quote today!</em></strong></h5>
+    <h1 class="h1 text-center" style="color:darkred"><strong> My Quotes</strong></h1>
+    <marquee behavior="scroll" direction="down" scrollamount='1' class="ma  text-center" style="color:crimson" ><strong><em>create your own quote today!</em></strong></marquee>
+
+
     <hr>
     <div class="row">
         <div class="col-md-2"></div>
-        <div class="col-md-8">
+        <div class="col-md-8" style="background-color:pink;">
             <app-quotes-form (addQuote)="addNewQuote($event)"></app-quotes-form>
 
         </div>
         <div class="col-md-2"></div>
        
     </div>
-    <div class="card mt-5 text-center mb-5">
+    <div class="card mt-5 text-center mb-5" style="background-color: pink;">
         <p>The written quote is displayed here. Click <strong>Quote details</strong> to checkout the quote details,see
             the sample quote below </p>
 
-        <div *ngFor='let quote of quotes; let i = index'>
+        <div *ngFor='let quote of quotes; let i = index' >
 
           
                 <p appVoteCount *ngIf="highestUpVotebtn()===quote.upvotes && quote.upvotes>0">
@@ -25,8 +27,8 @@
                 </p>
 
 
-                <button (click)='toggleDetails(i)' class="btn btn-primary">Quote Details</button>
-                <app-quote-detail *ngIf='quote.showAuthor' [quote]='quote' (isComplete)='deleteQuote($event,i)'>
+                <button (click)='toggleDetails(i)' class="btn btn-primary" >Quote Details</button>
+                <app-quote-detail style="color: darkred;" *ngIf='quote.showAuthor' [quote]='quote' (isComplete)='deleteQuote($event,i)'>
                 </app-quote-detail>
 
         </div>

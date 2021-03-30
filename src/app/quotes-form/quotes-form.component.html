@@ -3,7 +3,7 @@
         
         <div class="form-group">
   
-            <label for="name"><strong> Quote</strong></label>
+            <label for="name" style="color: brown;"><strong> Quote</strong></label>
             <textarea class="form-control" id="name" rows="4" [(ngModel)]="newQuote.name" name="name" #name='ngModel'  required></textarea>
             <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
                 <p>Quote is required</p>
@@ -11,7 +11,7 @@
         </div>
         <div class="form-group">
   
-            <label for="author"><strong> Author</strong></label>
+            <label for="author" style="color: brown;"><strong> Author</strong></label>
             <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel">
             <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
                 <p>Author is required</p>
@@ -21,14 +21,14 @@
         </div>
         <div class="form-group">
   
-            <label for="submitter"><strong> Submitter</strong></label>
+            <label for="submitter" style="color: brown;"><strong> Submitter</strong></label>
             <input type="text" required class="form-control" id="submitter"  [(ngModel)]="newQuote.submitter" name="submitter" #submitter="ngModel">
             <div [hidden]="submitter.valid || submitter.pristine" class="alert alert-danger">
                 <p>Submitter is required</p>
               </div>
         </div>
         <div class="form-group">
-            <label for="complete"><strong> Created on</strong></label><br>
+            <label for="complete" style="color: brown;"><strong> Created on</strong></label><br>
             <input type='date' id="complete" required  [(ngModel)]="newQuote.completeDate" name="completeDate" #completeDate="ngModel" >
             <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
                 <p>Date is required</p>
