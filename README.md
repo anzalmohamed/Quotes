@@ -40,7 +40,7 @@ The languages used were;
 
 ## Known Bugs
 
-* The application is missing the upvote and downvote options for the quote. 
+* The application does not show how much time has passed since the quote was created . it show a count of 0
 
 ## Contact Information 
 
